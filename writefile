@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+File.open('secrets.txt', 'a') do |file|
+  file.puts "This is a secret"
+end

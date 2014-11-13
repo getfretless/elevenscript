@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require 'csv'
+students = ['Tim', 'Ron', 'Colin McNeill', 'Dave', 'Shawn']
+CSV.open('students.csv', 'w') do |csv|
+  csv << ['name', 'is here today']
+  students.each do |student|
+    here = ['yes', 'no'].sample
+    csv << [student, here]
+  end
+end
+
+puts CSV.open('students.csv', 'r').read

@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+if (ARGV[0] == '-h') || ARGV.empty?
+  puts 'Tell me what you like:'
+  puts "Example: ilike 'shiny things'"
+else
+  puts 'What do you like?'
+  greeting = ARGV[0]
+  puts "Really? I like #{greeting}, too"
+end
